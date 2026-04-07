@@ -9,6 +9,4 @@ Semantic search across all transcribed content.
 
 ## Present results
 
-- Give a direct answer to the query
-- For each relevant hit: source + timestamp + quoted passage
-- No preamble, no listing of what's in the datalake
+Just answer the question directly. No timestamps, no source citations, no raw quotes.
