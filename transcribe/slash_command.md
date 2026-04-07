@@ -23,10 +23,13 @@ Show the list with size and date, then STOP and ask the user to pick one. Wait f
 ## Step 3 — Read transcript and summarize
 
 Read the output .txt file from ~/Downloads/notion-transcripts/.
-Then produce a summary in the same language as the transcript:
-- **Bullet points** grouped by topic
-- Keep it concise — max 20 bullets
-- Highlight any action items or decisions with ✅ or ⚠️
+Then produce a detailed summary in the same language as the transcript:
+
+- Group by topic with clear headers
+- For each point, include the **specific detail** discussed — not just the topic name. E.g. don't write "JIRA migration discussed", write "JIRA migration complete — log in via CoreWeave Okta, use WBN project; Zendesk integration pending"
+- When there's a debate, contradiction, or open question, spell it out explicitly with the different positions
+- Action items: who needs to do what, and why
+- Use ✅ for decisions made, ⚠️ for open issues/contradictions, 🔲 for action items
 
 ## Step 4 — Save summary
 
