@@ -31,7 +31,15 @@ Then produce a detailed summary in the same language as the transcript:
 - Action items: who needs to do what, and why
 - Use ✅ for decisions made, ⚠️ for open issues/contradictions, 🔲 for action items
 
-## Step 4 — Save summary
+## Step 4 — Embed into datalake
+
+```bash
+~/.pyenv/versions/3.11.11/envs/wandb-dev/bin/python \
+  /Users/rsong/notion-video-transcriber/embed_worker.py \
+  "/Users/rsong/Downloads/notion-transcripts/<filename>.json"
+```
+
+## Step 5 — Save summary
 
 Save the summary as a .md file alongside the transcript:
 `~/Downloads/notion-transcripts/<filename>_summary.md`
