@@ -37,6 +37,17 @@ def main():
         result = t.process_audio_file(video_path)
         if result:
             print(f"[worker] Transcript saved: {result}", flush=True)
+            # Notify via Polrea BLE
+            try:
+                import subprocess
+                name = Path(video_path).stem[:40]
+                subprocess.Popen([
+                    sys.executable,
+                    str(Path(__file__).parent / "notify.py"),
+                    f"转写完成: {name}",
+                ], stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL)
+            except Exception:
+                pass
             sys.exit(0)
         else:
             print("[worker] Transcription returned no result.", flush=True)
